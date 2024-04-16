@@ -1,0 +1,26 @@
+{
+	"author": "",
+	"description": "",
+	"devDependencies": {
+		"@liferay/eslint-plugin": "1.5.0",
+		"@liferay/npm-scripts": "49.2.3",
+		"@playwright/test": "1.39.0",
+		"@types/node": "^20.9.0",
+		"ts-node": "^10.9.2"
+	},
+	"license": "ISC",
+	"main": "index.js",
+	"name": "@liferay-solutions/playwright",
+	"private": true,
+	"resolutions": {
+		"prettier": "2.1.2"
+	},
+	"scripts": {
+		"checkFormat": "tsc && liferay-npm-scripts lint && liferay-npm-scripts format:check",
+		"format": "tsc && liferay-npm-scripts lint:fix && liferay-npm-scripts format",
+		"playwright": "playwright",
+		"test": "playwright test",
+		"test:ui": "playwright test --ui"
+	},
+	"version": "1.0.0"
+}
