@@ -5,12 +5,15 @@
 
 import {defineConfig} from '@playwright/test';
 
+import {config as sampleConfig} from './tests/sample/config';
+
 export default defineConfig({
 	expect: {
 		timeout: 15 * 1000,
 	},
 	forbidOnly: !!process.env.CI,
 	projects: [
+		sampleConfig
 	],
 	reporter: [
 		[
