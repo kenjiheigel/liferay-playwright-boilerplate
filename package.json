@@ -5,8 +5,9 @@
 		"@liferay/eslint-plugin": "1.5.0",
 		"@liferay/npm-scripts": "49.2.3",
 		"@playwright/test": "1.39.0",
-		"@types/node": "^20.9.0",
-		"ts-node": "^10.9.2"
+		"@types/node": "20.10.1",
+		"ts-node": "^10.9.2",
+		"typescript": "4.4.2"
 	},
 	"license": "ISC",
 	"main": "index.js",
