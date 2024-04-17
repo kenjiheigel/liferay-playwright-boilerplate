@@ -12,9 +12,7 @@ export default defineConfig({
 		timeout: 15 * 1000,
 	},
 	forbidOnly: !!process.env.CI,
-	projects: [
-		sampleConfig
-	],
+	projects: [sampleConfig],
 	reporter: [
 		[
 			'html',

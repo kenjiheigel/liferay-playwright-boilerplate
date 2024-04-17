@@ -8,5 +8,7 @@ import {expect, test} from '@playwright/test';
 test('title starts with Digital Experience', async ({page}) => {
 	await page.goto('/');
 
-	await expect(page).toHaveTitle('Digital Experience Software Tailored to Your Needs - Liferay');
+	await expect(page).toHaveTitle(
+		'Digital Experience Software Tailored to Your Needs - Liferay'
+	);
 });
