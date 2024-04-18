@@ -3,9 +3,13 @@
 	"description": "",
 	"devDependencies": {
 		"@liferay/eslint-plugin": "1.5.0",
-		"@liferay/npm-scripts": "49.2.3",
 		"@playwright/test": "1.39.0",
+		"@rushstack/eslint-patch": "^1.10.2",
 		"@types/node": "20.10.1",
+		"babel-eslint": "^10.1.0",
+		"eslint": "7.23.0",
+		"eslint-plugin-react": "7.23.1",
+		"prettier": "^3.2.5",
 		"ts-node": "^10.9.2",
 		"typescript": "4.4.2"
 	},
@@ -13,12 +17,9 @@
 	"main": "index.js",
 	"name": "@liferay-solutions/playwright",
 	"private": true,
-	"resolutions": {
-		"prettier": "2.1.2"
-	},
 	"scripts": {
-		"checkFormat": "tsc && liferay-npm-scripts lint && liferay-npm-scripts format:check",
-		"format": "tsc && liferay-npm-scripts lint:fix && liferay-npm-scripts format",
+		"checkFormat": "prettier . --write && eslint .",
+		"format": "prettier . --check && eslint . --fix",
 		"playwright": "playwright",
 		"test": "playwright test",
 		"test:ui": "playwright test --ui"

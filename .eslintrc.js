@@ -3,36 +3,27 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
+// Hack to get around eslint's inability to share nested plugin dependencies
+// See https://github.com/eslint/eslint/issues/3458
+
+require('@rushstack/eslint-patch/modern-module-resolution');
 const path = require('path');
 
-/**
- * We use @liferay/npm-scripts to perform linting in a controlled way, but we
- * also try to expose its configuration here so it can be picked up by editors.
- */
-let config = {};
-
-try {
-	config = require('@liferay/npm-scripts/src/config/eslint.config');
-}
-catch (error) {
-	throw new Error('@liferay/npm-scripts is not installed; please run "yarn"');
-}
-
-config = {
-	...config,
+module.exports = {
 	env: {
 		browser: true,
 		es6: true,
 		node: true,
 	},
+	extends: ['plugin:@liferay/portal'],
 	globals: {
-		...config.globals,
 		MODULE_PATH: true,
 		configuration: true,
 		fragmentElement: true,
 		fragmentNamespace: true,
 		layoutMode: true,
 	},
+	plugins: ['@liferay'],
 	rules: {
 		'@liferay/empty-line-between-elements': 'off',
 		'@liferay/import-extensions': 'off',
@@ -58,5 +49,3 @@ config = {
 		],
 	},
 };
-
-module.exports = config;
