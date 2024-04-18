@@ -1,23 +1,29 @@
 # Quickstart
+
 Install npm dependencies
+
 ```
-npm install 
+npm install
 ```
+
 Install playwright browsers
+
 ```
 npx playwright install
 ```
-Run a test    
+
+Run a test  
 `npx playwright test` or `npm run test`
 
-Format Source commands: 
+Format Source commands:
+
 ```
 npm run checkFormat
 npm run format
 ```
 
-Playwright Official Documentation     
+Playwright Official Documentation  
 https://playwright.dev/docs/intro
 
-Generating tests    
+Generating tests  
 https://playwright.dev/docs/codegen-intro

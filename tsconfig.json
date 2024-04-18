@@ -2,12 +2,7 @@
 	"compilerOptions": {
 		"esModuleInterop": true,
 		"noEmit": true,
-		"types": [
-			"node"
-		]
+		"types": ["node"]
 	},
-	"include": [
-		"../../global.d.ts",
-		"**/*.ts"
-	]
+	"include": ["../../global.d.ts", "**/*.ts"]
 }
